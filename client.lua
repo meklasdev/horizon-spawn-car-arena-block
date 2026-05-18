@@ -21,8 +21,8 @@ AddEventHandler('entityCreated', function(entity)
         return
     end
 
-    -- Allow one frame so the created vehicle has stable coordinates before distance checks.
-    Wait(0)
+    -- Allow the newly created vehicle to initialize before distance checks.
+    Wait(50)
 
     if isVehicleInBlockedSpawnArea(entity) then
         SetEntityAsMissionEntity(entity, true, true)
