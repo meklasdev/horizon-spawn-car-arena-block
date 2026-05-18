@@ -22,8 +22,6 @@ AddEventHandler('entityCreated', function(entity)
     end
 
     CreateThread(function()
-        Wait(0)
-
         if not DoesEntityExist(entity) then
             return
         end
