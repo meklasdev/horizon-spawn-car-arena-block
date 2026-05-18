@@ -21,14 +21,8 @@ AddEventHandler('entityCreated', function(entity)
         return
     end
 
-    CreateThread(function()
-        if not DoesEntityExist(entity) then
-            return
-        end
-
-        if isVehicleInBlockedSpawnArea(entity) then
-            SetEntityAsMissionEntity(entity, true, true)
-            DeleteEntity(entity)
-        end
-    end)
+    if isVehicleInBlockedSpawnArea(entity) then
+        SetEntityAsMissionEntity(entity, true, true)
+        DeleteEntity(entity)
+    end
 end)
