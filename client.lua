@@ -1,3 +1,5 @@
+local ENTITY_TYPE_VEHICLE = 2
+
 local function isVehicleInBlockedSpawnArea(vehicle)
     local vehicleCoords = GetEntityCoords(vehicle)
 
@@ -17,7 +19,7 @@ AddEventHandler('entityCreated', function(entity)
         return
     end
 
-    if GetEntityType(entity) ~= 2 then
+    if GetEntityType(entity) ~= ENTITY_TYPE_VEHICLE then
         return
     end
 
