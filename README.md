@@ -21,3 +21,4 @@ Default points:
 - `450.5118, -3299.5325, 26.9384, 92.3224`
 
 Each point also supports a `radius` value (default `35.0`) used to block nearby vehicle spawns.
+The `heading` value is kept in each config point for position/reference consistency with your original arena spawn data.

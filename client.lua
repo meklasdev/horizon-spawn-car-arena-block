@@ -21,6 +21,8 @@ AddEventHandler('entityCreated', function(entity)
         return
     end
 
+    Wait(0)
+
     if isVehicleInBlockedSpawnArea(entity) then
         SetEntityAsMissionEntity(entity, true, true)
         DeleteEntity(entity)
